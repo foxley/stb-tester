@@ -52,6 +52,10 @@ UNRELEASED
 * Python API: `stbt.match_text` has a new parameter `case_sensitive`. It
   defaults to False (that is, ignore case), which was the previous behaviour.
 
+* Python API: `stbt.wait_until` will try one last time after the timeout is
+  reached. This allows you to use a short `timeout_secs` with operations that
+  can take a long time.
+
 * Remote controls: Added `file:` remote control which writes keys pressed to a
   file.  Mostly intended for debugging.
 
