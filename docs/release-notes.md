@@ -32,6 +32,11 @@ UNRELEASED
   for the return value to stabilise (for example to wait for the position of a
   `MatchResult` to stabilise).
 
+* Python API: `stbt.MatchResult` objects are now considered equal if they
+  correspond to the same reference image, matching (or not matching) at the
+  same position. This makes it more convenient to use `stbt.match` with
+  `wait_until`'s `consecutive_secs` parameter.
+
 * New remote-control type "hdmi-cec". With the help of a USB-CEC adapter such
   as <https://www.pulse-eight.com/p/104/usb-hdmi-cec-adapter> this allows
   stb-tester to send keypresses over HDMI, to control devices that don't have
